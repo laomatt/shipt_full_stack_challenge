@@ -1,0 +1,14 @@
+<div id="search_container"></div>
+<div id="follower_list" data="[]"></div>
+<%= javascript_pack_tag 'followers' %>
+
+
+<script>
+	$('body').on('click', '.more_button', function(event) {
+		event.preventDefault();
+		// grab the next 8 from the list
+		var data = document.getElementById('follower_list').getAttribute('data');
+		var array = JSON.parse(data).slice(8, 8);
+		// append it
+	});
+</script>
